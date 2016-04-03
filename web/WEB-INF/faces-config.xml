@@ -8,7 +8,7 @@
         <managed-bean-class>cusc.mbean.DangkyNhaTuyenDung</managed-bean-class>
         <managed-bean-scope>request</managed-bean-scope>
     </managed-bean>
-   <!-- <navigation-rule>
+    <!-- <navigation-rule>
         <from-view-id>/index.xhtml</from-view-id>
         <navigation-case>
             <from-action>#{nguoiDung.checkUser()}</from-action>
@@ -40,6 +40,11 @@
             <to-view-id>/sanpham.xhtml</to-view-id>
         </navigation-case>
     </navigation-rule>
-
+    <redirect>
+        <view-param>
+            <name>id</name>
+            <value>abc</value>
+        </view-param>
+    </redirect>
 
 </faces-config>

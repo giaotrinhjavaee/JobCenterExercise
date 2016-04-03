@@ -2,6 +2,9 @@ package cusc.mbean;
 
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.RequestScoped;
+import javax.faces.context.FacesContext;
+import javax.faces.event.ActionEvent;
+import javax.faces.event.ValueChangeEvent;
 
 @ManagedBean
 @RequestScoped
@@ -15,10 +18,8 @@ public class NguoiDung {
         return login;
     }
 
-    public void checkUser() {
-        if (username.equals("admin") && password.equals("123456")) {
-            login = true;
-        }        
+    public String checkUser() {       
+        return "sanpham";
     }
 
     public String getUsername() {
@@ -37,4 +38,13 @@ public class NguoiDung {
         this.password = password;
     }
 
+    public void selectIt(ActionEvent e){
+        String buttonId = e.getComponent().getClientId();       
+        System.out.println(buttonId);
+    }    
+    
+    public void changeIt(ValueChangeEvent e){        
+        String newString=e.getNewValue().toString();
+        System.out.println(newString);
+    }
 }
