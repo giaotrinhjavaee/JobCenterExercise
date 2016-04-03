@@ -6,7 +6,23 @@
         <title>Facelet Title</title>
     </h:head>
     <h:body>
-        Hello from Facelets
+        <h:commandButton label="Login" action="#{nguoiDung.checkUser()}"/>
+
+        <h:outputLink value="lienhe.xhtml">Liên hệ</h:outputLink>
+        <h:link value="Liên hệ" outcome="lienhe"/>
+        <h:button value="Liên hệ" outcome="lienhe"/>
+        <h:commandButton value="Liên hệ" action="lienhe"/>
+        <h:commandLink value="Liên hệ" action="lienhe"/>
+
+        <h:outputLink value="#{facesContext.externalContext.applicationContextPath}/lienhe.xhtml"> 
+            Liên hệ 
+        </h:outputLink>
+
+        <h:commandButton label="Login" action="#{nguoidung.checkUser()}"/>
+
+        <h:link value="Success" outcome="success"/>
+        <h:button value="Success" outcome="success"/>
+        
     </h:body>
 </html>
 
