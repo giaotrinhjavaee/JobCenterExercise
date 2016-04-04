@@ -10,23 +10,37 @@
     <h:body>        
         <h:form>
             <h:outputText value="Thông tin đăng nhập"/>
-            <h:panelGrid columns="2">
+            <h:panelGrid columns="3" cellpadding="3">
                 <h:outputLabel value="E-Mail:  " for="email"/>
                 <h:inputText id="email"  value="#{dangkyNhaTuyenDung.email}"/>
+                <h:message for="email"/>
+                
                 <h:outputLabel value="Mật khẩu:  " for="matkhau"/>
-                <h:inputText id="matkhau" value="#{dangkyNhaTuyenDung.matkhau}" />
+                <h:inputSecret id="matkhau" value="#{dangkyNhaTuyenDung.matkhau}" />
+                <h:message for="matkhau"/>
+                
                 <h:outputLabel value="Gõ lại mật khẩu:  " for="confirmmatkhau"/>
-                <h:inputText id="confirmmatkhau" value="#{dangkyNhaTuyenDung.confirmmatkhau}" />
+                <h:inputSecret id="confirmmatkhau" value="#{dangkyNhaTuyenDung.confirmmatkhau}" />
+                <h:message for="confirmmatkhau"/>
             </h:panelGrid>
             
             <h:outputText value="Thông tin đăng nhập"/>
             <h:panelGrid columns="2">
                 <h:outputLabel value="Tên công ty:  " for="tencongty"/>
                 <h:inputText id="tencongty" />
+                <h:message for="tencongty"/>
+                
+                <h:outputLabel value="Số nhân viên:  " for="tencongty"/>
+                <h:inputText id="tencongty" />
+                <h:message for="tencongty"/>
+                
                 <h:outputLabel value="Sơ lược công ty:  " for="motacongty"/>
                 <h:inputText id="motacongty" />
+                <h:message for="motacongty"/>
+                
                 <h:outputLabel value="Website công ty:  " for="websitecongty"/>
                 <h:inputTextarea id="websitecongty"/> 
+                <h:message for="websitecongty"/>
             </h:panelGrid>
         </h:form>
     </h:body>

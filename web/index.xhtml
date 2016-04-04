@@ -8,34 +8,47 @@
     </h:head>
     <h:body>
         <h:form>
-        <h:commandButton label="Login" action="#{nguoiDung.checkUser()}"/>
+            <h:commandButton label="Login" action="#{nguoiDung.checkUser()}"/>
 
-        <h:outputLink value="lienhe.xhtml">Liên hệ</h:outputLink>
-        <h:link value="Liên hệ" outcome="lienhe"/>
-        <h:button value="Liên hệ" outcome="lienhe"/>
-        <h:commandButton value="Liên hệ" action="lienhe"/>
-        <h:commandLink value="Liên hệ" action="lienhe"/>
+            <h:outputLink value="lienhe.xhtml">Liên hệ</h:outputLink>
+            <h:link value="Liên hệ" outcome="lienhe"/>
+            <h:button value="Liên hệ" outcome="lienhe"/>
+            <h:commandButton value="Liên hệ" action="lienhe"/>
+            <h:commandLink value="Liên hệ" action="lienhe"/>
 
-        <h:outputLink value="#{facesContext.externalContext.applicationContextPath}/lienhe.xhtml"> 
-            Liên hệ 
-        </h:outputLink>
+            <h:outputLink value="#{facesContext.externalContext.applicationContextPath}/lienhe.xhtml"> 
+                Liên hệ 
+            </h:outputLink>
 
-        <h:commandButton value="Login" action="#{nguoiDung.checkUser()}"/>
+            <h:commandButton value="Login" action="#{nguoiDung.checkUser()}"/>
 
-        <h:link value="Success" outcome="success"/>
-        <h:button value="Success" outcome="success"/>
-        
-        <h:commandButton value="Action Listener" 
-                         actionListener="#{nguoiDung.selectIt}"/>
-        
-        
-        <h:inputText value="Old Message" size="20" valueChangeListener="#{nguoiDung.changeIt}"/>
-					
-		
+            <h:link value="Success" outcome="success"/>
+            <h:button value="Success" outcome="success"/>
+
+            <h:commandButton value="Action Listener" 
+                             actionListener="#{nguoiDung.selectIt}"/>
+
+
+            <h:inputText value="Old Message" size="20" valueChangeListener="#{nguoiDung.changeIt}"/>
+
         </h:form>
-        
-         
-       
+
+        <h:form>
+            <h:outputText value="Nhập số: "/>
+            <h:inputText id="so" value="#{calculator.number}" required="true"/>
+            <h:commandButton action="#{calculator.calculateSum}" value="Bình Phương"/><br/>
+            <h:outputText value="Result: #{calculator.result}"/>
+        </h:form>
+
+        <h:form>
+            <h:outputText value="Date of birth:"/>
+            <h:inputText id="birthDate"
+                         value="#{testBean.birthDate}"
+                         required="true">
+                <f:convertDateTime pattern="dd-MM-yyyy"/>
+            </h:inputText>
+            
+        </h:form>
     </h:body>
 </html>
 
